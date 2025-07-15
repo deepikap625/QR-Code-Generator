@@ -1,0 +1,120 @@
+/* style.css */
+
+:root {
+  --baseColor: #ffffff;
+  --formGap: 0.875rem;
+  --bodyFontFamily: "Open Sans", sans-serif;
+  --loginBorderRadius: 0.5rem;
+  --loginInputBackgroundColor: rgba(59, 65, 72, 0.6);
+  --loginInputHoverBackgroundColor: rgba(67, 74, 82, 0.6);
+}
+
+/* Set full-page transparent background image */
+body {
+  background: url('\WhatsApp Image 2024-10-18 at 20.10.07_fa13602e.jpg') no-repeat center center fixed;
+  background-position: center 35%; /* Move background image down */
+  background-size: cover;
+  color: white;
+  font-family: var(--bodyFontFamily);
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  position: relative;
+  
+}
+
+/* Optional overlay to help readability */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Slight dark overlay */
+  z-index: 0;
+}
+
+.grid {
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 400px;
+  background: rgba(0, 0, 0, 0.5); /* Transparent box */
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+textarea,
+select,
+input[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: var(--loginBorderRadius);
+  background-color: var(--loginInputBackgroundColor);
+  color: white;
+  font-size: 1rem;
+}
+
+textarea:focus,
+textarea:hover,
+select:focus,
+select:hover {
+  background-color: var(--loginInputHoverBackgroundColor);
+}
+
+input[type="submit"] {
+  background-color: #ea4c88;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #d44179;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0rem; /* reduced from 1rem to 0.3rem */
+}
+
+
+p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+/* Reset button with transparent background and hover effect */
+input[type="button"] {
+  background-color: rgba(255, 255, 255, 0.1); /* transparent white */
+  color: white;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  width: 100%;
+  cursor: pointer;
+  backdrop-filter: blur(3px); /* adds modern blur effect */
+  transition: all 0.3s ease;
+}
+
+input[type="button"]:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: white;
+  color: black;
+}
+
+#img {
+  margin-top: 1rem; /* Adjust this value as needed */
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
